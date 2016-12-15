@@ -10,7 +10,9 @@
                     <h2>{{ .title }}</h2>
                     <p>{{ .description }}</p>
                     <p>
-                        <a href="{{ .url }}" class="btn btn-primary">
+                        <a href="#"
+                           data-nav-section="{{ .jump }}"
+                           class="btn btn-primary nav-link">
                             {{ .button}}
                         </a>
                     </p>

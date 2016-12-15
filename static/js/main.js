@@ -77,7 +77,17 @@
             return false;
         });
 
+        $('.nav-link').click(function (evt) {
+            var section = $(this).data('nav-section');
 
+            evt.preventDefault();
+
+            if ($('[data-section="' + section + '"]').length) {
+                $('html, body').animate({
+                    scrollTop: $('[data-section="' + section + '"]').offset().top
+                }, 500);
+            }
+        });
     };
 
     // Reflect scrolling in navigation

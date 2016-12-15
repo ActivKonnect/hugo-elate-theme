@@ -5,8 +5,8 @@ $grid-gutter-width: 40px !default;
 $border-radius-base: 4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #52d3aa !default;
-$brand-secondary: #3f95ea !default;
+$brand-primary: #092031 !default;
+$brand-secondary: #1e626c !default;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -146,12 +146,12 @@ $form-group-margin-bottom: 30px !default;
     background-color: $brand-primary;
     /* IE9, iOS 3.2+ */
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, rgb(63, 149, 234)), color-stop(1, rgb(82, 211, 170)));
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #092031), color-stop(1, #1e626c));
     /* Android 2.3 */
-    background-image: -webkit-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
+    background-image: -webkit-repeating-linear-gradient(top left, #092031 0%, #1e626c 100%);
     /* IE10+ */
-    background-image: repeating-linear-gradient(to bottom right, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
-    background-image: -ms-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
+    background-image: repeating-linear-gradient(to bottom right, #092031 0%, #1e626c 100%);
+    background-image: -ms-repeating-linear-gradient(top left, #092031 0%, #1e626c 100%);
 }
 
 @font-face {
