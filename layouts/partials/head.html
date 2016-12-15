@@ -2,9 +2,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ .Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO - Hugo port by Pieter Saey" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
-    <meta name="author" content="FREEHTML5.CO / Hugo port " />
+    <meta name="description" content="{{ .Site.Params.meta.description }}" />
+    <meta name="keywords" content="{{ .Site.Params.meta.keywords }}" />
+    <meta name="author" content="{{ .Site.Params.meta.author }}" />
 
   <!--
     //////////////////////////////////////////////////////
@@ -28,15 +28,15 @@
      -->
 
     <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+    <meta property="og:title" content="{{ .Title }}"/>
+    <meta property="og:image" content="{{ .Site.Params.meta.logo_url | absURL }}"/>
+    <meta property="og:url" content="{{ .URL | absURL}}"/>
+    <meta property="og:description" content="{{ .Site.Params.meta.description }}"/>
+    <meta name="twitter:title" content="{{ .Title }}" />
+    <meta name="twitter:site" content="{{ .Site.Params.meta.twitter_site }}">
+    <meta name="twitter:image" content="{{ " images/logo_moshi.png" | absURL }}" />
+    <meta name="twitter:url" content="{{ .URL | absURL}}" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="/favicon.ico">
