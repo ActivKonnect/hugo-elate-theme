@@ -11,7 +11,7 @@
         {{ partial "nav.html" .}}
 
 		{{ partial "hero.html" .}}
-		
+
         {{ partial "intro.html" .}}
 
 		{{ if .Site.Params.work.enable }}
@@ -32,6 +32,10 @@
 
 		{{ if .Site.Params.counters.enable }}
         	{{ partial "counters.html" .}}
+        {{ end }}
+
+        {{ if .Site.Params.newsletter.enable }}
+            {{ partial "newsletter.html" .}}
         {{ end }}
 
 		{{ if .Site.Params.contact.enable }}

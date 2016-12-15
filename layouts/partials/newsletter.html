@@ -1,0 +1,30 @@
+<section id="fh5co-newsletter" data-section="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-heading text-center">
+                <h2 class="to-animate">{{ with .Site.Params.newsletter.title }}{{ . }}{{ end }}</h2>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                        <h3>{{ with .Site.Params.newsletter.description }}{{ . | markdownify }}{{ end }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <form action=""
+                  class="col-md-6 col-md-offset-3"
+                  method="post">
+                <div class="form-group -newsletter">
+                    <input type="email"
+                           class="form-control"
+                           placeholder="{{ with .Site.Params.newsletter.placeholder }}{{ . }}{{ end }}">
+
+                    <button class="btn btn-primary btn-lg">
+                        {{ with .Site.Params.newsletter.cta }}{{ . }}{{ end }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
