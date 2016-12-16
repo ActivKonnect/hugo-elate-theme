@@ -27,3 +27,41 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', '{{ .Site.Params.meta.ga_id }}', 'auto');
 ga('send', 'pageview');
 </script>
+
+<script type="text/javascript">
+    function findParent(el, test) {
+        while (el && !test(el)) {
+            el = el.parentNode;
+        }
+
+        return el;
+    }
+
+    function isA(el) {
+        return el && el.tagName === 'A';
+    }
+
+    function parse(url) {
+        var a = document.createElement('A');
+        a.href = url;
+        return a;
+    }
+
+    function cleanUrl(url) {
+        var p = parse(url);
+        return p.hostname + p.pathname;
+    }
+
+    document.addEventListener('click', function (e) {
+        var link = findParent(e.target, isA);
+
+        if (link && link.hostname !== window.location.hostname) {
+            ga('send', 'event', 'interaction', 'external-link', cleanUrl(link.href));
+        }
+    });
+
+    document.addEventListener('submit', function (e) {
+        ga('send', 'event', 'interaction', 'form-submit',
+            cleanUrl(e.target.getAttribute('action')));
+    });
+</script>
