@@ -1,0 +1,27 @@
+<section id="fh5co-offers">
+    <div class="container">
+        <div class="col-md-12 section-heading text-center">
+            <h2 class="to-animate">DISCOVER OUR AWESOME PRE-PACKAGED OFFERS</h2>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                    <h3>Available for messenger, WeChat, @Line and Web</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row row-bottom-padded-lg">
+            {{ range .Site.Params.offers.item }}
+            <div class="fh5co-block to-animate" style="background-image: url(images/{{ .img }});">
+                <div class="overlay-darker"></div>
+                <div class="overlay"></div>
+                <div class="fh5co-text">
+                    <i class="fh5co-intro-icon {{ .icon }}"></i>
+                    <h2>{{ .title }}</h2>
+                    <p class="min-width-310 white-space-pre text-center">{{ .text1 }}</p>
+                    <p class="min-width-310 white-space-pre text-center">{{ .text2 }}</p>
+                    <p class="min-width-310 white-space-pre text-center">{{ .text3 }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

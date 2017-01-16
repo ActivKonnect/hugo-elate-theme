@@ -211,6 +211,26 @@
         }
     };
 
+    var offersAnimate = function () {
+        var $el = $('#fh5co-offers');
+        if ($el.length > 0) {
+            $el.waypoint(function (direction) {
+                if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                    setTimeout(function () {
+                        $el.find('.to-animate').each(function (k) {
+                            var el = $(this);
+
+                            setTimeout(function () {
+                                el.addClass('fadeInLeft animated');
+                            }, k * 200, 'easeInOutExpo');
+                        });
+                    }, 1000);
+                    $(this.element).addClass('animated');
+                }
+            }, {offset: '80%'});
+        }
+    };
+
     var workAnimate = function () {
         if ($('#fh5co-work').length > 0) {
 
@@ -234,7 +254,7 @@
                     $(this.element).addClass('animated');
 
                 }
-            }, {offset: '80%'});
+            }, {offset: '220px'});
 
         }
     };
@@ -471,6 +491,7 @@
         // Animations
         homeAnimate();
         introAnimate();
+        offersAnimate();
         workAnimate();
         testimonialAnimate();
         servicesAnimate();

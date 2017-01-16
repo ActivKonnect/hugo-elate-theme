@@ -542,6 +542,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 101%;
 }
 
+#fh5co-offers,
 #fh5co-intro {
     position: relative;
     bottom: 0;
@@ -641,6 +642,44 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
+    }
+}
+
+#fh5co-offers {
+    padding-bottom: 24em;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    @media screen and (max-width: $screen-sm) {
+      padding-bottom: 65em;
+    }
+
+    > div {
+        left: 0;
+        right: 0;
+        top: -250px;
+        position: absolute;
+    }
+
+    .section-heading {
+        margin-bottom: 0;
+        padding-bottom: 2em;
+
+        h2:after {
+            background: #fff;
+        }
+
+        h2, h3 {
+            color: #fff;
+        }
+    }
+
+    .row-bottom-padded-lg {
+        padding-bottom: 2em;
+        display: table;
+        margin: auto;
     }
 }
 
@@ -1007,6 +1046,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     position: relative;
     color: rgba(255, 255, 255, .8);
+    padding-bottom: 30em;
     @include fh5co-gradient;
     a {
         color: rgba(255, 255, 255, .5);
@@ -1531,6 +1571,17 @@ h1, h2, h3, h4, h5, h6 {
     animation-duration: .3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
+
+.white-space-pre {
+  white-space: pre !important;
+}
+
+.min-width-310 {
+  @media screen and (min-width: $screen-lg-desktop) {
+    min-width: 310px;
+    display: block;
+  }
 }
 
 // #colour-variations li a {
