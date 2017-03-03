@@ -24,7 +24,7 @@
                 <h3>{{ with .Site.Params.contact.form }}{{ . | markdownify }}{{ end }}</h3>
                 <form method="post" action="//formspree.io/{{ with .Site.Params.email }}{{.}}{{ end }}">
                     <input type="hidden" name="_subject" value="moshi bot contact"/>
-                    <input type="hidden" name="_cc" value="remy@moshi.paris"/>
+                    <input type="hidden" name="_cc" value="remy@moshi.paris, geoffroy@moshi.paris"/>
                     <input type="text" name="_gotcha" style="display:none"/>
                     <input type="hidden" name="_next" value="{{ "/thanks" | absURL }}"/>
 
